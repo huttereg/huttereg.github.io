@@ -2,7 +2,6 @@
 ---
 @charset "utf-8";
 
-// Our variables
 $base-font-family: 'Anonymous Pro', serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
@@ -18,21 +17,10 @@ $text-color:       $grey-color-dark;
 $background-color: #fcfcfc;
 $brand-color:      #2a7ae2;
 
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-// Import partials from `sass_dir` (defaults to `_sass`)
 @import 
   "base", 
   "header", 
   "page", 
   "post"
   //"syntax-highlighting" leaving highlighting out until needed
- ;
+;
