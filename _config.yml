@@ -1,0 +1,20 @@
+# Site settings
+title: zyxww
+description: "simple blog to collect my thoughts, probably nothing of interest here - hutter"
+baseurl: ""
+url: "http://zyxww.xyz" 
+
+# Default layout for posts
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+    
+# Build settings
+markdown: kramdown
+
+# Global settings
+timezone: "America/Chicago"
