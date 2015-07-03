@@ -1,0 +1,9 @@
+.pagination-disabled {
+  pointer-events: none;
+  text-decoration: none;
+  
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  } 
+}
