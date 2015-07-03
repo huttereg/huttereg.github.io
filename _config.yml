@@ -4,6 +4,8 @@ description: "simple blog to collect my thoughts, probably nothing of interest h
 baseurl: ""
 url: "http://zyxww.xyz" 
 
+paginate: 5
+
 # Default layout for posts
 defaults:
   -

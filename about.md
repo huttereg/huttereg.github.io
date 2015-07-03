@@ -9,6 +9,6 @@ TODO fill in better about info
 {{site.description}}
 
 
-### contact
-email: [hutter](mailto:hutter.zyxww@gmail.com)
+### [contact](mailto:hutter.zyxww@gmail.com)
 
+### [follow](/feed.xml)
