@@ -4,7 +4,7 @@ description: "simple blog to collect my thoughts, probably nothing of interest h
 baseurl: ""
 url: "http://zyxww.xyz" 
 
-paginate: 5
+paginate: 1
 
 # Default layout for posts
 defaults:
@@ -20,3 +20,7 @@ markdown: kramdown
 
 # Global settings
 timezone: "America/Chicago"
+
+gems:
+  - jekyll-sitemap
+

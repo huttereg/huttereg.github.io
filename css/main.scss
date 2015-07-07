@@ -2,7 +2,7 @@
 ---
 @charset "utf-8";
 
-$base-font-family: 'Anonymous Pro', serif;
+$base-font-family: 'Anonymous Pro', monospace;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -21,7 +21,6 @@ $brand-color:      #2a7ae2;
   "base", 
   "header", 
   "page", 
-  "pagination",
   "post"
   //"syntax-highlighting" leaving highlighting out until needed
 ;

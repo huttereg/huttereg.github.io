@@ -1,21 +1,18 @@
 ---
 layout: default
 ---
+{% comment %}
+  must use 'page' as variable here. allow reuse of the post-header
+{% endcomment %}
 
 {% for page in paginator.posts %}
 <div class="post">  
   {% include post-header.html %}
-  
   <article class="post-content">
     {{ page.excerpt }}
     <a href="{{ page.url }}">read more</a>
   </article>
-  
 <div>
-
 {% endfor %}
 
-<div>
-   <a href="/page{{paginator.next_page}}/" {% unless paginator.next_page %}class="pagination-disabled"{% endunless %}>Older</a>
-   <a {% if paginator.page == 2 %}  href="/" {% else %} href="/page{{paginator.previous_page}}/" {% endif %}{% unless paginator.previous_page %}class="pagination-disabled"{% endunless %}>Newer</a>
-</div>
+{% include pagination-buttons.html %}

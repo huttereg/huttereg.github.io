@@ -2,9 +2,9 @@
 layout: default
 ---
 <div class="post">
-  {% include post-header.html%}
-
   <article class="post-content">
+    {% include post-header.html %}
     {{ content }}
   </article>
+  {% include post-buttons.html %}
 </div>
