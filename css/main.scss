@@ -1,26 +1,74 @@
 ---
 ---
 @charset "utf-8";
-
-$base-font-family: 'Anonymous Pro', monospace;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-$text-color:       $grey-color-dark;
-$background-color: #fcfcfc;
-$brand-color:      #2a7ae2;
-
 @import 
-  "base", 
-  "header", 
-  "page", 
-  "post"
+  "reset", 
+  "variables", 
+  "modular-scale", 
+  "mixins",
+  "typography",
+  "layouts"
   //"syntax-highlighting" leaving highlighting out until needed
 ;
+
+// .show-grid {
+//   background-image: -webkit-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+//   background-image: -moz-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+//   background-image: -o-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+//   background-image: linear-gradient(to bottom, cyan 0, rgba(255,255,255,0) 1px);
+//   background-repeat: repeat-y;
+//   background-size: 100% 1rem;
+// }
+
+body {
+  background-color: $backgroundColour;
+  color: $bodyColour
+}
+
+.nav { 
+  max-width: 45rem;
+  margin: auto;
+  
+  border-top: $headingColour 5px solid;
+  border-bottom: #E8E8E8 1px solid;
+  
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+  a {
+    display: inline-block;
+    
+    @include fontsize(epsilon, all);
+    
+    letter-spacing: -.04em;
+    word-spacing: -.2em;
+    margin-top: -1rem;
+    color: $headingColour;
+        
+    &:hover {
+      color: $headingColour;
+    }
+  }
+  
+  .nav-right {
+    float: right;
+    padding-top: 1.6rem;
+  }
+}
+
+.post-header-meta {
+  color:  $captionColour;
+  @include fontsize(eta, all);
+  margin-top: -1rem;
+}
+
+.archive {
+  
+  .light {
+    color: $captionColour;
+  }
+  
+  .inline {
+    display: inline;
+  }
+}

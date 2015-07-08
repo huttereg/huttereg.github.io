@@ -5,14 +5,15 @@ layout: default
   must use 'page' as variable here. allow reuse of the post-header
 {% endcomment %}
 
-{% for page in paginator.posts %}
-<div class="post">  
-  {% include post-header.html %}
-  <article class="post-content">
+<div class="section typeset">  
+  {% for page in paginator.posts %}
+  <article class="single">
+    {% include post-header.html %}
     {{ page.excerpt }}
-    <a href="{{ page.url }}">read more</a>
+    <p><a href="{{ page.url }}">read more</a></p>
   </article>
+  {% endfor %}
+  <div class="single">
+    {% include pagination-buttons.html %}
+  </div>
 <div>
-{% endfor %}
-
-{% include pagination-buttons.html %}

@@ -2,13 +2,16 @@
 title: archive
 layout: page
 ---
-<div>
-  <ul class="post-list">
+<div class="archive">
+  <ul>
     {% for post in site.posts %}
     <li>
-      <span class="post-meta">{{ post.date | date: "%F" }}</span>
-      <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+      <span class="light">{{ post.date | date: "%F" }}</span> ☂ 
+      <h3 class="inline" ><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
     </li>
     {% endfor %}
   </ul>
+  {% comment %}
+  <h3><a href="{{ "/feed.xml" | prepend: site.baseurl }}">follow</a></h3>
+  {% endcomment %}
 </div>
