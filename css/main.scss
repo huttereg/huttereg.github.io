@@ -56,18 +56,7 @@ body {
   }
 }
 
-.post-header-meta {
-  color:  $captionColour;
-  @include fontsize(eta, all);
-  margin-top: -1rem;
-}
-
-.archive {
-  
-  .light {
-    color: $captionColour;
-  }
-  
+.archive {  
   .inline {
     display: inline;
   }

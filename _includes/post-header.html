@@ -1,6 +1,6 @@
 <header>
   <h1>{{ page.title }}</h1>
   {% if page.date %}  
-  <p class="post-header-meta">{{ page.date | date: "%F" }}{% if page.meta %} ☂ {{ page.meta }}{% endif %}</h6>
+  <p class="caption">{{ page.date | date: "%F" }}{% if page.meta %} ☂ {{ page.meta }}{% endif %}</h6>
   {% endif %}
 </header>

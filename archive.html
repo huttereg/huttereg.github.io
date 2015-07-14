@@ -6,7 +6,7 @@ layout: page
   <ul>
     {% for post in site.posts %}
     <li>
-      <span class="light">{{ post.date | date: "%F" }}</span> ☂ 
+      <span class="caption">{{ post.date | date: "%F" }} ☂ </span>
       <h3 class="inline" ><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
     </li>
     {% endfor %}
