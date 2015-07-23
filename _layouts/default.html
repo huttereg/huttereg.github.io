@@ -3,6 +3,18 @@
   {% include head.html %}
   <body>
     {% include header.html %}
-    {{ content }}
+    <section class="typeset section">
+      {{ content }}
+    </section>
+    <script>
+      document.onkeydown = function(e) {
+         if (e.altKey && e.keyCode === 71 ) { // alt+g
+           var elements = document.getElementsByClassName('typeset');
+           for(var i in elements) {
+              elements[i].classList.toggle('show-grid');
+           }
+         }
+      };
+    </script>
   </body>
 </html>

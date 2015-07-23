@@ -1,7 +1,0 @@
-
-<div>
-  <p>
-    <a href="/page{{paginator.next_page}}/" {% unless paginator.next_page %} hidden {% endunless %}>older</a>
-    <a href="{% if paginator.page == 2 %}/{% else %}/page{{paginator.previous_page}}/{% endif %}" {% unless paginator.previous_page %} hidden {% endunless %}>newer</a>
-  </p>
-</div>

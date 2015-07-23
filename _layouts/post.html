@@ -1,10 +1,13 @@
 ---
 layout: default
 ---
-<section class="section typeset show-grid">
-  <article class="single">
-    {% include post-header.html %}
-    {{ content }}
-    {% include post-buttons.html %}
-  </article>
-</section>
+<article class="single">
+  {% include post-header.html %}
+  {{ content }}
+  <div>
+    <p>
+      <a href="{{page.previous.url}}" {% unless page.previous %} hidden {% endunless %}>older</a>
+      <a href="{{page.next.url}} " {% unless page.next %} hidden {% endunless %}>newer</a>
+    </p>
+  </div>
+</article>

@@ -28,11 +28,11 @@ $rootsizes: (
 // ! Make sure to have as many widths as breakpoints above.
 // Note: this was 'maxwidths' in previous versions.
 $measures: (
-  measure-0: 500,  // 500px wide
-  measure-1: 550,  // 550px wide
-  measure-2: 600,  // 600px wide
-  measure-3: 680,  // 680px wide
-  measure-4: 750   // 750px wide
+  measure-0: 550,  // 500px wide
+  measure-1: 600,  // 550px wide
+  measure-2: 650,  // 600px wide
+  measure-3: 730,  // 680px wide
+  measure-4: 800   // 750px wide
 );
 
 // Set the max-widths for containers (based on design).
@@ -60,21 +60,21 @@ $bodytype: (
   regular: 400,
   bold: 700,
   italic: italic,
-  cap-height: 0.61
+  cap-height: 0.62
 );
 
 $headingtype: (
   font-family: '"Anonymous Pro", monospace',
   regular: 400,
   bold: 700,
-  cap-height: 0.61
+  cap-height: 0.62
 );
 
 $monospacetype: (
   font-family: '"Anonymous Pro", monospace',
   regular: 400,
   bold: 700,
-  cap-height: 0.61
+  cap-height: 0.62
 );
 
 // Here are some local fonts cap-height sizes to get you started:
