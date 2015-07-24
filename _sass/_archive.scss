@@ -1,5 +1,7 @@
 .archive-list {
- margin-left: 1rem;
+  @include breakpoint(break-1) {
+    margin-left: 1rem;
+  }
 }
 
 .archive-inline {
