@@ -2,14 +2,14 @@
 title: archive
 layout: page
 ---
-<div class="archive">
-  <ul>
+<div>
+  <ul class="archive-list">
     {% for post in site.posts %}
     <li>
       <span class="caption">{{ post.date | date: "%F" }} ☂ </span>
-      <h3 class="inline" ><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+      <h4 class="archive-inline"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
     </li>
     {% endfor %}
   </ul>
-  <h3><a href="{{ "/feed.xml" | prepend: site.baseurl }}">follow</a></h3>
+  <p><a href="{{ "/feed.xml" | prepend: site.baseurl }}">follow</a><p>
 </div>
