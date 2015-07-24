@@ -1,0 +1,20 @@
+<style>
+  .show-grid {
+    background-image: -webkit-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+    background-image: -moz-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+    background-image: -o-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+    background-image: linear-gradient(to bottom, cyan 0, rgba(255,255,255,0) 1px);
+    background-repeat: repeat-y;
+    background-size: 100% 1rem;
+  }
+</style>
+<script>
+  document.onkeydown = function(e) {
+     if (e.altKey && e.keyCode === 71 ) { // alt+g
+       var elements = document.getElementsByClassName('typeset');
+       for(var i in elements) {
+          elements[i].classList.toggle('show-grid');
+       }
+     }
+  };
+</script>
