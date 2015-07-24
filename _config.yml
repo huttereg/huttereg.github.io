@@ -21,6 +21,8 @@ markdown: kramdown
 # Global settings
 timezone: "America/Chicago"
 
+exclude: [resources]
+
 gems:
   - jekyll-sitemap
 

@@ -1,19 +1,17 @@
 #nav-box {
   max-width: 45rem;
   margin: 0 auto;
+  padding: 0 1rem;
 
   border-top: $headingColour 5px solid;
   border-bottom: #E8E8E8 1px solid;
-
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .nav {
   @include fontsize(epsilon, all);
   font-family: unquote(map-get($headingtype, font-family));
-  font-style: normal;
   font-weight: map-get($headingtype, regular);
+  font-style: normal;
 
   color: $headingColour;
 }
@@ -24,11 +22,15 @@
 }
 
 .nav-author {
-  word-spacing: -.2rem;
   margin-left: 1rem;
+  word-spacing: -0.2rem;
 }
 
 .nav-archive {
   float: right;
+}
+
+.nav-nudge-left {
+  margin-left: -0.1rem;
 }
 
