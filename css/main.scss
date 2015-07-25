@@ -2,20 +2,19 @@
 ---
 @charset "utf-8";
 
-@import
-  "variables-override",
+@import "variables-override";
 
-  "sassline/reset",
-  "sassline/variables",
-  "sassline/modular-scale",
-  "sassline/mixins",
-  "sassline/typography",
-  "sassline/layouts",
+@import "sassline/reset";
+@import "sassline/variables";
+@import "sassline/modular-scale";
+@import "sassline/mixins";
+@import "sassline/typography";
+@import "sassline/layouts";
 
-  "base",
+@import "base";
 
-  "archive",
-  "nav",
-  "post",
-  "util"
-;
+@import "archive";
+@import "kern";
+@import "nav";
+@import "post";
+@import "util";

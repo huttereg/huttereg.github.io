@@ -2,7 +2,7 @@
 title: zyxww
 description: "simple blog to collect my thoughts; probably nothing of interest here"
 baseurl: ""
-url: "http://zyxww.xyz" 
+url: "http://zyxww.xyz"
 
 paginate: 1
 
@@ -14,7 +14,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-    
+
 # Build settings
 markdown: kramdown
 
@@ -24,5 +24,7 @@ timezone: "America/Chicago"
 exclude: [resources]
 
 gems:
-  - jekyll-sitemap
-
+- jekyll-mentions
+- jemoji
+- jekyll-redirect-from
+- jekyll-sitemap

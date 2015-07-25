@@ -1,0 +1,23 @@
+# not including css/main.scss because the front matter breaks the linter
+scss_files: '_sass/*.scss'
+
+exclude:
+  - '_sass/sassline/**'
+  - '_sass/_syntax-highlighting.scss'
+
+linters:
+  PropertySortOrder:
+    order: smacss
+
+  LeadingZero:
+    style: include_zero
+
+  NameFormat:
+    variable_convention: camel_case
+
+  HexNotation:
+    style: uppercase
+
+  StringQuotes:
+    style: double_quotes
+

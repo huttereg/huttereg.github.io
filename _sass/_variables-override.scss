@@ -6,13 +6,6 @@ $bodytype: (
   cap-height: 0.52
 );
 
-$headingtype: (
-  font-family: 'anonymous-pro, monospace',
-  regular: 400,
-  bold: 700,
-  cap-height: .63
-);
-
 $monospacetype: (
   font-family: 'anonymous-pro, monospace',
   regular: 400,
@@ -20,6 +13,10 @@ $monospacetype: (
   cap-height: 0.63
 );
 
+$headingtype: $bodytype;
+$navtype: $monospacetype;
+
 $headingColour: #424242;
 $bodyColour: #424242;
 $captionColour: #828282;
+$lineColour: #E8E8E8;
