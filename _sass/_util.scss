@@ -1,3 +1,9 @@
+.flush-list {
+  @include breakpoint(break-1) {
+    margin-left: 1rem;
+  }
+}
+
 .kern-l-1 {
   margin-left: -0.1rem;
 }

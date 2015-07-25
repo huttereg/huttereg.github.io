@@ -1,15 +1,14 @@
 ---
 layout: default
 ---
-<div class="single">
+<div class="single archive">
   <h1>{% include nav/archive.html %}</h1>
-  <ul class="archive-list">
+  <ul class="flush-list">
     {% for post in site.posts %}
     <li>
-      <span class="caption">{{ post.date | date: "%F" }} ☂ </span>
-      <h4 class="archive-inline"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+      <span class="caption">{{ post.date | date: "%F" }} ☂ </span><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </li>
     {% endfor %}
   </ul>
-  <p><a href="{{ "/feed.xml" | prepend: site.baseurl }}">follow</a><p>
+  <p><a href="{{ "/feed.xml" | prepend: site.baseurl }}">follow</a></p>
 </div>
