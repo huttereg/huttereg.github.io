@@ -8,7 +8,9 @@ layout: default
 {% for page in paginator.posts %}
 <article class="single">
   {% include post-header.html index="true" %}
-  {{ page.excerpt }}
+  <div class="post-copy">
+    {{ page.excerpt }}
+  </div>
   <p><a href="{{ page.url | prepend: site.baseurl}}">read more</a></p>
 </article>
 {% endfor %}

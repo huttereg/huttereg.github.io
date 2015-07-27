@@ -3,7 +3,9 @@ layout: default
 ---
 <article class="single">
   {% include post-header.html %}
-  {{ content }}
+  <div class="post-copy">
+    {{ content }}
+  </div>
   <div>
     <p>
       <a href="{{page.previous.url}}" {% unless page.previous %} hidden {% endunless %}>older</a>

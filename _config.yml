@@ -4,7 +4,8 @@ description: "simple blog to collect my thoughts; probably nothing of interest h
 baseurl: ""
 url: "http://zyxww.xyz"
 
-paginate: 1
+excerpt_separator: <!--more-->
+paginate: 5
 
 # Default layout for posts
 defaults:
@@ -28,3 +29,4 @@ gems:
 - jemoji
 - jekyll-redirect-from
 - jekyll-sitemap
+
