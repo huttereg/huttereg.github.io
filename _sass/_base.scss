@@ -7,3 +7,9 @@ img {
   display: block;
   margin: auto;
 }
+
+.typeset {
+  p a, li a {
+    background-position: 0 74%;
+  }
+}

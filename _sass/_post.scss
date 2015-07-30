@@ -2,6 +2,7 @@
   color: $headingColour;
 }
 
+// reduce space between paragraphs
 .post-copy {
   p {
     @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 1, $breakpoint: all);
