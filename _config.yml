@@ -25,8 +25,5 @@ timezone: "America/Chicago"
 exclude: [resources]
 
 gems:
-- jekyll-mentions
-- jemoji
-- jekyll-redirect-from
-- jekyll-sitemap
+- jekyll-paginate
 
