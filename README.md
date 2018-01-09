@@ -1,2 +1,3 @@
 # huttereg.github.io
-personal blog
+scratch space for testing various web things
+

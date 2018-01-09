@@ -1,23 +1,32 @@
----
-layout: default
----
-{% comment %}
-  must use 'page' as variable here. allow reuse of the post-header
-{% endcomment %}
-
-{% for page in paginator.posts %}
-<article class="single">
-  {% include post-header.html index="true" %}
-  <div class="post-copy">
-    {{ page.excerpt }}
-  </div>
-  <p><a href="{{ page.url | prepend: site.baseurl}}">read more</a></p>
-</article>
-{% endfor %}
-<div class="single">
-  <p>
-    <a href="/page{{paginator.next_page}}/" {% unless paginator.next_page %} hidden {% endunless %}>older</a>
-    <a href="{% if paginator.page == 2 %}/{% else %}/page{{paginator.previous_page}}/{% endif %}" {% unless paginator.previous_page %} hidden {% endunless %}>newer</a>
-  </p>
-</div>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>zyxww</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: monospace;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                font-size: 100%;
+                color: #424242;
+                background-color: #FCFCFC;
+            }
+            div {
+                font-size: 3em;
+            }
+            a {
+                font-size: 1.5em;
+            }
+        </style>
+        <div>zyxww</div>
+        <a href="mailto:hutter.zyxww@gmail.com">contact</a>
+    </body>
+</html>
 
