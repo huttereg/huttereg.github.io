@@ -11,35 +11,50 @@
 				--light: #fcfcfc;
 				--time: 20s;
 
-				align-items: center;
 				background-color: var(--light);
 				color: var(--dark);
-				display: flex;
-				flex-direction: column;
 				font-family: monospace;
 				font-size: 100%;
 				height: 100vh;
 				justify-content: space-around;
+				margin: 0;
 				width: 100vw;
 			}
 
+			header {
+				margin-bottom: 2rem;
+			}
+
 			main {
+				flex: 1;
+			}
+
+			footer {
+				height: 8rem;
+				padding-bottom: 1rem;
+			}
+
+			.flex-column {
 				align-items: center;
 				display: flex;
-				flex: 1;
+				flex-direction: column;
+			}
+
+			.flex {
+				align-items: center;
+				display: flex;
 			}
 
 			.title {
 				font-size: 3rem;
 				font-weight: normal;
-				margin: 2rem 0;
+				margin: 0 0 1rem 0;
 			}
 
-			.contact {
-				color: var(--dark);
-				display: block;
-				font-size: 1.5rem;
-				margin: 2rem 0;
+			.sub-title {
+				font-size: 2rem;
+				font-weight: normal;
+				margin: 0;
 			}
 
 			@keyframes spin {
@@ -76,13 +91,39 @@
 			.spin-4 { animation-duration: calc(var(--time) / 4); }
 			.spin-5 { animation-duration: calc(var(--time) / 5); }
 			.spin-6 { animation-duration: calc(var(--time) / 6); }
+
+			.hours {
+				flex-wrap: wrap;
+				margin: 0 3rem;
+			}
+
+			.hour {
+				margin-top: 1rem;
+			}
+
+			.conditions {
+				height: 50px;
+				width: 50px;
+			}
+
+			.conditions[src*="c01n"] {
+				height: 30px;
+				width: 30px;
+				margin: 6px 10px 14px;
+			}
+
+			.attribution {
+				color: var(--dark);
+			}
+
 		</style>
 	</head>
-	<body>
-		<header>
+	<body class="flex-column">
+		<header class="flex-column">
 			<h1 class="title">zyxww</h1>
+			<h2 id="clock" class="sub-title">&nbsp;</h2>
 		</header>
-		<main>
+		<main class="flex">
 			<svg class="spinner" viewBox="0 0 140 140">
 				<g transform="rotate(-45, 70, 70)">
 					<path d="M70, 5 A65,65 0 0,1 135,70 h-5 A60,60 0 0,0 70,10 Z" class="spin-1" />
@@ -96,8 +137,26 @@
 			</svg>
 		</main>
 		<footer>
-			<a class="contact" href="mailto:hutter.zyxww@gmail.com">contact</a>
+			<div id="weather" class="flex-column"></div>
 		</footer>
+		<script type="module">
+			import { renderWeather } from './weather.mjs';
+
+			function updateClock() {
+				const clock = document.getElementById('clock');
+				const time  = (new Date()).toLocaleTimeString().toLowerCase().replace(' ', '')
+				clock.innerText = time;
+			}
+			updateClock();
+			window.setInterval(updateClock, 1000);
+
+			try {
+				renderWeather();
+			} catch (error) {
+				//oh well, no weather for you
+				console.error(error);
+			}
+		</script>
 	</body>
 </html>
 
