@@ -38,5 +38,6 @@ export async function getWeather(hours = 12, units = getUnits(), lang = getLangu
 
 	const response = await fetch(`${apiUrl}?${toQueryParameters(params)}`);
 	const json = await response.json();
+	localStorage.setItem('weather', JSON.stringify(json));
 	return json;
 };
