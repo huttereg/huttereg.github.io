@@ -21,17 +21,8 @@
 				width: 100vw;
 			}
 
-			header {
-				margin-bottom: 2rem;
-			}
-
 			main {
 				flex: 1;
-			}
-
-			footer {
-				height: 8rem;
-				padding-bottom: 1rem;
 			}
 
 			.flex-column {
@@ -47,12 +38,6 @@
 
 			.title {
 				font-size: 3rem;
-				font-weight: normal;
-				margin: 0 0 1rem 0;
-			}
-
-			.sub-title {
-				font-size: 2rem;
 				font-weight: normal;
 				margin: 0;
 			}
@@ -91,37 +76,11 @@
 			.spin-4 { animation-duration: calc(var(--time) / 4); }
 			.spin-5 { animation-duration: calc(var(--time) / 5); }
 			.spin-6 { animation-duration: calc(var(--time) / 6); }
-
-			.hours {
-				flex-wrap: wrap;
-				margin: 0 3rem;
-			}
-
-			.hour {
-				margin-top: 1rem;
-			}
-
-			.conditions {
-				height: 50px;
-				width: 50px;
-			}
-
-			.conditions[src*="c01n"] {
-				height: 30px;
-				width: 30px;
-				margin: 6px 10px 14px;
-			}
-
-			.attribution {
-				color: var(--dark);
-			}
-
 		</style>
 	</head>
 	<body class="flex-column">
 		<header class="flex-column">
 			<h1 class="title">zyxww</h1>
-			<h2 id="clock" class="sub-title">&nbsp;</h2>
 		</header>
 		<main class="flex">
 			<svg class="spinner" viewBox="0 0 140 140">
@@ -136,28 +95,6 @@
 				</g>
 			</svg>
 		</main>
-		<footer>
-			<div id="weather" class="flex-column"></div>
-		</footer>
-		<script type="module">
-			import { renderWeather } from './weather.mjs';
-
-			function updateClock() {
-				const clock = document.getElementById('clock');
-				const time  = (new Date()).toLocaleTimeString().toLowerCase().replace(' ', '')
-				clock.innerText = time;
-			}
-			updateClock();
-			window.setInterval(updateClock, 1000);
-
-			try {
-				const weather = JSON.parse(localStorage.getItem('weather'));
-				renderWeather(weather);
-			} catch (error) {
-				//oh well, no weather for you
-				console.error(error);
-			}
-		</script>
 	</body>
 </html>
 
